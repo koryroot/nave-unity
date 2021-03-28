@@ -19,7 +19,7 @@ public class Ballons : MonoBehaviour
 
         spriteRenderer.sprite = balloonSprites[Random.Range(0,3)];
 
-        transform.position = new Vector3(Random.Range(-6.7f,6.4f),transform.position.y, transform.position.z);
+        transform.position = new Vector3(Random.Range(-6.7f,4.4f),transform.position.y, transform.position.z);
 
         force = new Vector3(0, Random.Range(50,150), 0);
         rb.AddForce(force);
