@@ -6,13 +6,15 @@ public class BalloonsBlue : MonoBehaviour
 {
     [SerializeField] Sprite[] balloonSprites;
     [SerializeField] Vector3 force;
-
+    private UIManager UIMgr;
 
     private Rigidbody2D rbb;
     private SpriteRenderer spriteRenderer;
 
     void Start()
     {
+        UIMgr = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
+
         rbb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -34,6 +36,13 @@ public class BalloonsBlue : MonoBehaviour
         if (collision.gameObject.tag == "topWall")
         {
             Destroy(this.gameObject);
+        }
+        else if (collision.gameObject.tag == "Nave")
+        {
+            
+            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
+            UIMgr.AddScore10();
         }
     }
 }
