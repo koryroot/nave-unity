@@ -20,10 +20,17 @@ public class BalloonsBlue : MonoBehaviour
 
         spriteRenderer.sprite = balloonSprites[Random.Range(0, 1)];
         transform.position = new Vector3(Random.Range(-8.7f, 6.4f), transform.position.y, transform.position.z);
+        if (UIMgr.scoret >=500)
+        {
+            force = new Vector3(0, Random.Range(500, 600), 0);
+            rbb.AddForce(force);
+        }
+        else
+        {
+            force = new Vector3(0, Random.Range(155, 250), 0);
+            rbb.AddForce(force);
 
-        force = new Vector3(0, Random.Range(155, 250), 0);
-        rbb.AddForce(force);
-        
+        }
     }
 
     // Update is called once per frame
