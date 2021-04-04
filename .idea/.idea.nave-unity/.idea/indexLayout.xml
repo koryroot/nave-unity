@@ -26,7 +26,9 @@
       <Path>.idea</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
+      <Path>Temp</Path>
       <Path>UserSettings</Path>
+      <Path>nave-unity</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>
