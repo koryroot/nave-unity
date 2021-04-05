@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.nave-unity.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../:\Users\rowin\OneDrive\Imágenes\Documentos\Unity\nave-unity\.idea\.idea.nave-unity\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
