@@ -5,7 +5,6 @@ using UnityEngine;
 public class NaveScript : MonoBehaviour
 {
 
-    private Animator animator;
     private Rigidbody2D rb;
     Vector2 input;
     [SerializeField] GameObject NavePrefabs;
@@ -14,7 +13,6 @@ public class NaveScript : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -47,17 +45,7 @@ public class NaveScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "topWall")
         {
-            UpdateState("NaveExplotion");
-            Destroy(this.gameObject, .8f);
+            Destroy(this.gameObject);
         }
     }
-
-    public void UpdateState(string state = null)
-    {
-        if(state != null)
-        {
-            animator.Play(state);
-        }
-    }
-
 }

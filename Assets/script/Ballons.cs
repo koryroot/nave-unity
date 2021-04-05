@@ -23,17 +23,8 @@ public class Ballons : MonoBehaviour
 
         transform.position = new Vector3(Random.Range(-6.7f,4.4f),transform.position.y, transform.position.z);
 
-        if(UIMgr.scoret >= 500)
-        {
-            force = new Vector3(0, Random.Range(300, 400), 0);
-            rb.AddForce(force);
-        }
-        else 
-        {
-            force = new Vector3(0, Random.Range(100, 150), 0);
-            rb.AddForce(force);
-
-        }
+        force = new Vector3(0, Random.Range(50,150), 0);
+        rb.AddForce(force);
 
     }
 
